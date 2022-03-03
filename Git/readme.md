@@ -1,2 +1,1 @@
 mokomes git
-git ini
