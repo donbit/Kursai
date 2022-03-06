@@ -17,8 +17,9 @@
             <input name="Pavarde" type="text">
         </label>
         <label for="email">
-            <div>email: *</div>
-            <input name="email" type="text" required>
+            <div>Email: *</div>
+            <input type="email" placeholder="Iveskite email" name="email" id="email" required>
+
         </label>
         <label for="Number">
             <div>Number</div>
@@ -29,12 +30,38 @@
            <div> <input name="gender" type="radio">Male
             <input name="gender" type="radio">Female</div>
         </label>
+        <div>
+            <label for="Gyvunai">Gyvunai:
+                
+                <select name="Gyvunai">
+                    <option value="first"selected>Suo</option>
+                    <option value="second" >Kate</option>
+                    <option value="third">Papuga</option>
+                    <option value="third">Ziurkenas</option>
+                    <option value="third">Ponis</option>
+                  </select>
+            </label></div>
+
+            <label for="telstas">Tekstas
+                <div><textarea name="textarea"
+   rows="5" cols="30"
+    maxlength="100">Tekstas</textarea></div>
+            </label>
+        </div>
         
 <label for="newsletter">
     <div>Subscribe to newsletter</div>
     <input name="newsletter" type="checkbox">
 </label>
-<div><button type="submit">Register</button></div>
+
+
+    <div>   <label for="checkbox">Pasirinkti
+                <input name="Pazymeti" type="checkbox">
+            </label>
+    </div>
+
+        <div><button type="submit" class="registerbtn">Register</button>
+        </div>
         </form>
     </body>
 </html>
