@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -19,7 +19,7 @@ body {
 }
 
 /* Full-width input fields */
-input[type=text], input[type=email], input[type=textarea] {
+input[type=text], input[type=email] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -83,14 +83,14 @@ hr {
     <h1>Registracijos forma</h1>
     <p>Užpildyti langelius esančius žemiau.</p>
     <hr>
-    <label for="Vardas"><b>Vardas</b></label> 
+    <label for="Vardas"><b>Vardas*</b></label> 
     <input name="Vardas" type="text" placeholder="Vardenis" required>
     
-    <label for="Pavarde"><b>Pavardė</b></label>
-    <input name="Pavarde" type="text" placeholder="Pavardenis" required>
+    <label for="Pavarde"><b>Pavardė*</b></label>
+    <input name="Pavarde" type="text" placeholder="Pavardenis" required >
     
     <label for="email"><b>Email</b></label>
-    <input type="email" placeholder="Jūsų Email" name="email" id="email" required>
+    <input type="email" placeholder="Jūsų Email" name="email" id="email">
     
     <label for="textarea"><b>Aprašymas</b></label>
         <p>
@@ -154,8 +154,8 @@ hr {
           <input type="reset" value="Išvalyti laukus" class="reset" >
 
     <hr>
-    <button type="submit" class="registerbtn">Registruotis</button>
- 
+    <button type="submit" class="registerbtn" >Registruotis</button>
+  
   
 </form>
 
