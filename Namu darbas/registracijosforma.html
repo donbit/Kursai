@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -102,28 +102,26 @@ hr {
     <input type="email" placeholder="Jūsų Email" name="email" id="email" required>
     
     <label for="textarea" "><b>Aprašymas</b></label>
-        <p>
-            <textarea class="textarea" name="textarea" placeholder="Aprašymas iki 200" name="textarea" maxlength="200" ></textarea>
-        </p>
+    <textarea class="textarea" name="textarea" placeholder="Aprašymas iki 200" name="textarea" maxlength="200" ></textarea>
 
-    <p><b>Lytis</b></p>
+    <b>Lytis</b>
     <input type="radio" id="Vyras" name="Lytis" value="Vyras">
     <label for="Vyras">Vyras</label>
     <input type="radio" id="Moteris" name="Lytis" value="Moteris">
-    <label for="Moteris">Moteris</label>
+    <label for="Moteris">Moteris</label><br>
 
-    <p><label for="date"><b>Gimimo data</b></label></p>
-    <input type="date"  name="date" id="date">
+    <label for="date"><b>Gimimo data</b></label>
+    <input type="date"  name="date" id="date"><br>
  
-        <p><label for="Miestas"><b>Pasirinkti miestą:</b></label></p>
-            <select name="Miestas" id="Miestas">
+    <label for="Miestas"><b>Pasirinkti miestą:</b></label>
+      <select name="Miestas" id="Miestas">
                 <option value="">--Pasirinkti miestą--</option>
                 <option value="Vilnius">Vilnius</option>
                 <option value="Kaunas">Kaunas</option>
                 <option value="Klaipėda">Klaipėda</option>
                 <option value="Panevėžys">Panevėžys</option>
                 <option value="Šiauliai">Šiauliai</option>
-            </select>
+      </select>
 
         <p><b>Adresas:</b></p>
         <div class="form-group">
@@ -152,11 +150,11 @@ hr {
                    id="inputCountry" 
                    placeholder="Šalis">
           </div>
-          <p><label for="Subscribe"><b>Prenumeruoti naujienlaiškį:</b></label></p>
-          <div>
-            <input type="checkbox" id="Panevėžys" name="Panevėžys">
-            <label for="Subscribe">Prenumeruoti</label>
-          </div>
+          <label for="Subscribe"><b>Prenumeruoti naujienlaiškį:</b></label>
+          
+            <input type="checkbox">
+            <label for="Subscribe"></label>
+          
 
           <input type="reset" value="Išvalyti laukus" class="reset" >
 
