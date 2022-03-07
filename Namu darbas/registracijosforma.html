@@ -27,6 +27,15 @@ input[type=text], input[type=email], input[type=textarea] {
   border: none;
   background: #f1f1f1;
 }
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+
+}
 
 
 input[type=text]:focus, input[type=email]:focus  {
@@ -92,9 +101,9 @@ hr {
     <label for="email"><b>Email</b></label>
     <input type="email" placeholder="Jūsų Email" name="email" id="email" required>
     
-    <label for="textarea"><b>Aprašymas</b></label>
+    <label for="textarea" "><b>Aprašymas</b></label>
         <p>
-            <textarea name="textarea" placeholder="Aprašymas iki 200" name="textarea" maxlength="200" id="textarea"></textarea>
+            <textarea class="textarea" name="textarea" placeholder="Aprašymas iki 200" name="textarea" maxlength="200" ></textarea>
         </p>
 
     <p><b>Lytis</b></p>
@@ -105,8 +114,6 @@ hr {
 
     <p><label for="date"><b>Gimimo data</b></label></p>
     <input type="date"  name="date" id="date">
-    
-
  
         <p><label for="Miestas"><b>Pasirinkti miestą:</b></label></p>
             <select name="Miestas" id="Miestas">
@@ -155,7 +162,7 @@ hr {
 
     <hr>
     <button type="submit" class="registerbtn">Registruotis</button>
- 
+ </div>
   
 </form>
 
