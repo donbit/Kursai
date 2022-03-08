@@ -19,7 +19,7 @@ body {
 }
 
 /* Full-width input fields */
-input[type=text], input[type=email], input[type=textarea] {
+input[type=text], input[type=email] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -92,14 +92,14 @@ hr {
     <h1>Registracijos forma</h1>
     <p>Užpildyti langelius esančius žemiau.</p>
     <hr>
-    <label for="Vardas"><b>Vardas</b></label> 
+    <label for="Vardas"><b>Vardas*</b></label> 
     <input name="Vardas" type="text" placeholder="Vardenis" required>
     
-    <label for="Pavarde"><b>Pavardė</b></label>
-    <input name="Pavarde" type="text" placeholder="Pavardenis" required>
+    <label for="Pavarde"><b>Pavardė*</b></label>
+    <input name="Pavarde" type="text" placeholder="Pavardenis" required >
     
     <label for="email"><b>Email</b></label>
-    <input type="email" placeholder="Jūsų Email" name="email" id="email" required>
+    <input type="email" placeholder="Jūsų Email" name="email" id="email">
     
     <label for="textarea" "><b>Aprašymas</b></label>
     <textarea class="textarea" name="textarea" placeholder="Aprašymas iki 200" name="textarea" maxlength="200" ></textarea>
@@ -159,8 +159,13 @@ hr {
           <input type="reset" value="Išvalyti laukus" class="reset" >
 
     <hr>
+<<<<<<< HEAD
     <button type="submit" class="registerbtn">Registruotis</button>
  </div>
+=======
+    <button type="submit" class="registerbtn" >Registruotis</button>
+  
+>>>>>>> f2b1cc057d64c767f0c272bc005c0fed2efe87e3
   
 </form>
 
