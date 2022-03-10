@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.kubas, .staciakampis {
+    
+    background: red;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    margin-bottom: 5px;
+   
+
+}
+.staciakampis {
+    
+    width: 50%;
+   
+}
+.kubas, div div {
+    color: blue;
+    text-align: center;
+}
+div div div {
+    color: green;
+}
+
+a:visited {
+    color: rgb(236, 4, 198);
+}
+input {
+    display: inline-block;
+    width: 100px;
+    
+}
+input[type=text] {
+    background: yellow;
+}
+input[type=number] {
+    background: green;
+}
+input[type=email] {
+    background: red;
+}
+table { 
+width: 300px;
+    
+    margin-top: 50px;
+}
+td:not(td:nth-of-type(even)) {
+    background: red;
+}
+td:nth-of-type(even) {
+    background: blue;
+}
+tr:nth-of-type(2n) td:nth-of-type(2n) {
+    background: yellow;
+}
+div {
+    
+    background: red;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+
+}
+div div {
+    background: yellow;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+
+}
