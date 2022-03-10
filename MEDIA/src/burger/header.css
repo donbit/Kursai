@@ -1,0 +1,56 @@
+body{
+    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 56px;
+    background: darkgoldenrod;
+}
+
+.logo {
+    height: 50px;
+}
+.right-side {
+    
+    align-items: center;
+}
+
+.express-container {
+    display: flex;
+}
+.express-container img div {
+    display: flex;
+    align-items: flex-end;
+}
+
+.express-container img {
+    margin-right: 10px;
+}
+
+.express-container div {
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 18px;
+    font-weight: 700;
+    color: #3d2514;
+}
+
+.right-side nav a {
+    font-size: 22px;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 700;
+    color: #3d2514;
+    text-decoration: none;
+    margin-right: 28px;
+}
+
+
+
+
+
+
+
+
