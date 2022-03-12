@@ -2,50 +2,58 @@ body{
     font-family: 'Alfa Slab One', cursive;
     font-family: 'Bebas Neue', cursive;
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    padding: 50px 56px;
-    background: darkgoldenrod;
-}
-
-.logo {
-    height: 50px;
-}
-.right-side {
+    padding: 56px 50px;
     
-    align-items: center;
+    
 }
 
 .express-container {
     display: flex;
-}
-.express-container img div {
-    display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 26px; 
 }
 
 .express-container img {
-    margin-right: 10px;
+    margin-right: 8px;
+   
 }
 
 .express-container div {
+    align-items: center;
     font-family: 'Montserrat', sans-serif;
-    margin-right: 18px;
     font-weight: 700;
+    font-size: 14px;
     color: #3d2514;
+    
 }
 
 .right-side nav a {
     font-size: 22px;
     font-family: 'Bebas Neue', cursive;
-    font-weight: 700;
+    font-weight: 400;
+    letter-spacing: 4px;
     color: #3d2514;
     text-decoration: none;
+    font-size: 18px;
     margin-right: 28px;
+    
 }
+
+header .right-side nav a:first-child {
+    margin-left: 0px;
+}
+header .right-side nav a:last-child {
+    margin-right: 0px;
+}
+
+
 
 
 
