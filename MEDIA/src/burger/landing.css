@@ -5,10 +5,22 @@
     margin-top: -200px;
     padding: 213px 56px 78px;
 }
+
+.landing-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    width: 1440px;
+    padding-left: 50px;
+    
+
+}
 .headings{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    
 }
 
 .dashed {
@@ -42,23 +54,38 @@
 }
 
 .burger-image{
+    
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
+    position: relative;
     
 }
-.burger-image img{
+/* .glow {
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    z-index: 1;
+    height: 174px;
+    width: 174px;
+    border-radius: 50%;
+    
+    box-shadow: 5px 5px 41px 22px #ebe4bf;
+} */
+
+.burger-image img{
+    z-index: 2;
+    display: flex;
     justify-content: flex-end;
     margin-bottom: -190px;
 }
 
 .burger-image .circle {
-    
+    position: relative;
 }
 .circle {
-    position: relative;
+    z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +121,6 @@
     font-size: 35px;
     letter-spacing: 12px;
     margin-right: -12px;
-    
 }
 
 

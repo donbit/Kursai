@@ -1,0 +1,42 @@
+.offers {
+    display: flex;
+    justify-content: space-between;
+    font-family:'Bebas Neue';
+    color: white;
+    padding: 70px 108px;
+    max-width: 1440px;
+    margin: auto;
+   
+}
+
+
+.big-card {
+    background: url(./assets/big-card.png);
+    width: 596px;
+    height: 420px;
+    padding: 30px 34px;
+    margin-right: 42px;
+
+    
+}
+.card {
+    width: 596px;
+    height: 192px;
+    padding: 30px 34px;
+
+}
+.card.first {
+    background: url(./assets/pirma-kortele.png);
+    margin-bottom: 36px;
+}
+
+.card.second {
+    background: url(./assets/antra-kortele.png);
+}
+.offers h2 {
+    font-size: 42px;
+
+}
+.offers h4 {
+    font-size: 25px;
+}
