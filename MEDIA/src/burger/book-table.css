@@ -1,0 +1,66 @@
+.book-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(./assets/reserve-backround.png);
+    width: 1440px;
+    height: 670px;
+    margin: auto;
+    margin-top: 50px;
+    background-position-x: -86px;
+    background-position-y: -50px;
+}
+
+.book-table h4 {
+    font-family:'Bebas Neue';
+    font-size: 25px;
+    color: #3d2514;
+    margin-bottom: 22px;
+    margin-top: 60px;
+}
+
+.book-table h2 {
+
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 41px;
+    color: #3d2514;
+    margin-bottom: 100px;
+}
+
+.reg-form {
+    
+    font-family:'Bebas Neue';
+    font-size: 15px;
+    color: #3d2514;
+   
+}
+
+.reg-form input {
+    width: 380px;
+    height: 66px;
+    padding-left: 24px;
+    border: 1px solid #bebebe;;
+    border-radius: 5px;
+}
+.reg-form tr {
+    display: flex;
+    padding-bottom: 25px;
+}
+.reg-form td {
+    padding-right: 25px;
+
+}
+
+.reg-form button {
+    display: flex;
+    align-items: center;
+    width: 380px;
+    height: 66px;
+    background: #bf2222;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+

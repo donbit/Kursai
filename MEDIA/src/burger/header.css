@@ -3,8 +3,17 @@ body {
     font-family: 'Alfa Slab One', cursive;
     font-family: 'Bebas Neue', cursive;
     font-family: 'Montserrat', sans-serif;
+   
     
-    
+}
+body button:hover{
+    cursor: pointer;
+    background: lightgray;
+}
+
+header nav a:hover{
+    cursor: pointer;
+    color: white;
 }
 
 header {

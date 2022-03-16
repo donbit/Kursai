@@ -1,7 +1,6 @@
 .info-table {
    display: flex;
    justify-content: space-evenly;
-  
    width: 1295px;
    height: 493px;
    margin: auto;
@@ -15,11 +14,16 @@
     display: flex;
     flex-wrap: wrap;
     width: 519px;
+    padding-right: 45px;
 }
 
 .info-dot {
     display: flex;
+    align-items: center;
+    
+    
 }
+
 .info-dot span:nth-child(1) {
     height: 20px;
     width: 20px;
@@ -54,7 +58,7 @@
     font-size: 35px;
     letter-spacing: normal;
     color: #3d2514;
-    margin-bottom: 62px;
+    margin-bottom: 40px;
 }
 
 .info-table h4 {
@@ -62,12 +66,13 @@
     font-size: 22px;
     color: #3d2514;
     margin-bottom: 11px;
-    margin-top: 63px;
+    margin-top: 20px;
 }
 .info-table p {
     display: flex;
-    font-size: 21px;
+    font-size: 20px;
     text-align: left;
-    line-height: 30px;
+    line-height: 1.5em;
+    width: 507px;
 }
 
