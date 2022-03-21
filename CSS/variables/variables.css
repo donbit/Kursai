@@ -1,0 +1,11 @@
+:root {
+    --primary: blue;
+    --backround: red;
+    --padding-sm: 12px 16px;
+    --font-big: "roboto", san-serif;
+    --brand-shadow:0 0 3px 4px black;
+    --margin-xs: 12px;
+}
+
+
+
