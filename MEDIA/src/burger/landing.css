@@ -61,18 +61,13 @@
     position: relative;
     
 }
-/* .glow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    height: 174px;
-    width: 174px;
+.glow {
+   display: flex;
+   justify-items: flex-start;
     border-radius: 50%;
-    
-    box-shadow: 5px 5px 41px 22px #ebe4bf;
-} */
+    background-color: #eeeda6;
+    box-shadow: 0px 0px 300px 100px #eeeda6;
+}
 
 .burger-image img{
     z-index: 2;

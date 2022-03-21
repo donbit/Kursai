@@ -4,11 +4,12 @@
     align-items: center;
     background: url(./assets/reserve-backround.png);
     width: 1440px;
-    height: 670px;
+    height: 800px;
     margin: auto;
     margin-top: 50px;
     background-position-x: -86px;
-    background-position-y: -50px;
+    background-position-y: -46px;
+    
 }
 
 .book-table h4 {

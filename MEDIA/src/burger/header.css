@@ -3,8 +3,6 @@ body {
     font-family: 'Alfa Slab One', cursive;
     font-family: 'Bebas Neue', cursive;
     font-family: 'Montserrat', sans-serif;
-   
-    
 }
 body button:hover{
     cursor: pointer;

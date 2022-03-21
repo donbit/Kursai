@@ -1,73 +1,60 @@
-.footer {
+footer {
+position: relative;
+max-width: 1326px;
+color: white;
+margin: auto;
+}
+
+footer .top-side {
+    position: absolute;
+    top: 58px;
+    left: 20px;
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .top-side .logo-wrapper {
+flex: 0 0 100%;
+margin-bottom: 48px;
+}
+
+footer .top-side p {
+    font-size: 17px;
+    line-height: 25px;
+    font-family: 'Montserrat', sans-serif;
+    width: 42%;
+}
+footer .text-and-contacts {
     display: flex;
     justify-content: space-between;
-    background: url(./assets/footer-backround.png);
-    width: 1326px;
-    height: 525px;
-    margin: auto;
-    color: white;
-    padding-left: 43px;
-    padding-right: 30px;
-    
-    
+    align-items: flex-end;
 }
-.footer-left {
+footer .contacts li {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    
-}
-.footer-left img {
-    width: 409px;
-    height: 90px;
-    margin-bottom: 69px;
-    margin-left: 23px;
-    margin-top: 62px;
-}
-
-.footer-left p {
-   
-    font-family: 'montserrat';
-    line-height: 1.5em;
-    font-size: 16px;
-    width: 497px;
-    margin-bottom: 160px;
-}
-.footer-left h6 {
-    padding-bottom: 32px;
-}
-
-.footer-right {
-    display: flex;
-    align-items: left;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.footer-right div {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    margin-left: -400px;
+}
+footer .contacts span {
+    font-size: 21px;
+    font-family: 'Bebas Neue', cursive;
+    margin-left: 18px;
 }
 
-.footer-right div h5 {
-    margin-left: 20px;
-    font-family:'Bebas Neue';
-    font-size: 17px;
-    letter-spacing: 2px;
-    margin-right: 110px;
-}
-
-.social-icons {
+footer .bottom-side {
+    position: absolute;
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 22px;
-    margin-top: 160px;
-    
+    bottom: 0;
+    left: 0;
+    padding: 20px 30px;
+    left: 14px;
+    bottom: 0px;
+    font-family: 'Bebas Neue', cursive;
 }
 
-.footer-bottom-space {
-    margin: auto;
-    height: 100px;
+footer .social-media {
+
+ margin-left: 850px;
+
 }
