@@ -1,0 +1,36 @@
+$primary-color: #3323;
+$blue: blue;
+@mixin flexcenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-layout($horizontal: center, $vertical: center) {
+    display: flex;
+    justify-content: $horizontal;
+    align-items: $vertical;
+}
+
+@mixin cube($dimensions: 100px, $background-color: $blue) {
+    width: $dimensions;
+    height: $dimensions;
+    background: $background-color;
+}
+
+div {
+    @include cube;
+    @include flex-layout(flex-end, flex-end);
+    div {
+        @include cube(75px, red);
+        div {
+            @include cube(50px, yellow);
+        }
+    }
+}
+
+.flex {
+    @include flexcenter();
+    color: #ffff;
+    font-size: 30px;
+}

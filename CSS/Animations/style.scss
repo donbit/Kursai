@@ -1,0 +1,13 @@
+.hover-me {
+    position: relative;
+    menu {
+        position: absolute;
+        left: -100%;
+        transtion: left 500ms linear;
+    }
+    &:hover {
+        menu {
+            left: 0;
+        }
+    }
+}
