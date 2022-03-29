@@ -1,0 +1,9 @@
+@import './theme';
+@import './utility';
+@import './header/header';
+
+body {
+    display: flex;
+    
+    margin: auto;
+}

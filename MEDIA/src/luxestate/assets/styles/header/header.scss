@@ -1,0 +1,29 @@
+@import '../theme';
+
+.header {
+    padding: 26px 18px;
+}
+
+.header__logo {
+    font-family: $font-family;
+}
+
+.header__navigation-menu {
+    position: relative;
+
+    .header__navigation-links {
+        display: none;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+    }
+
+    &:hover {
+        .header__navigation-links {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
