@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="container ">
+        <h1 class="text-center">Star wars table</h1>
+
+        <button onclick="renderTableData(characters)">All characters</button>
+        <button onclick="renderTableData(charactersWithGreaterMassThan80)">Mass more than 80</button>
+        <button onclick="renderTableData(charactersWithLesserHeightThan180)">Height less than 180</button>
+        <button onclick="renderTableData(charactersMale)">male characters</button>
+        <button onclick="renderTableData(charactersWithBlueEyes)">Blue Eyes</button>
+
+        <table class="table text-center ">
+            <thead>
+                <tr class="text-primary ">
+                    <th onclick="sortByAlphabet('name')">Name</th>
+                    <th onclick="sortByNumber('height')">Height</th>
+                    <th onclick="sortByNumber('mass')">Mass</th>
+                    <th onclick="sortByAlphabet('name')">Eye color</th>
+                    <th onclick="sortByAlphabet('name')">Gender</th>
+                    <th>Homeworld</th>
+                </tr>
+
+            </thead>
+            <tbody id="table" class="text-center">
+
+            </tbody>
+        </table>
+        <form>
+            <input id="name" placeholder="Enter name">
+            <input id="height" placeholder="Enter height">
+            <input id="mass" placeholder="Enter mass">
+            <input id="eye_color" placeholder="Enter eye color">
+            <input id="gender" placeholder="Enter gender">
+            <button type="button" onclick="addCharacter()"> Add character</button>
+        </form>
+    </section>
+
+</body>
+<script src="objects.js"></script>
+
+</html>

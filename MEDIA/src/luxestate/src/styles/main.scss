@@ -38,9 +38,7 @@ body {
 
 .header__navigation {
     @include flex-layout(flex-end, center);
-
 }
-
 
 .header__navigation-menu {
     position: relative;
@@ -56,28 +54,30 @@ body {
             border-radius: $border-radius;
         }
 
-
         &:focus-within {
             .header__navigation-links {
                 @include flex-layout;
                 flex-direction: column;
                 background: $white;
-                // padding: 0 100%;
                 z-index: 2;
-
-
-
-
             }
         }
     }
 }
 
-
 .header__burger-menu {
     fill: $text-color;
-
     cursor: pointer;
+}
+
+@media (min-width: $desktop) {
+    .header__navigation-menu {
+        order: 0;
+    }
+
+    .header__burger-menu {
+        display: none;
+    }
 }
 
 .header__navigation-link {
@@ -98,6 +98,12 @@ body {
     margin-left: 100px;
 }
 
+@media (min-width: $tablet) {
+    .header__getting-started-wrapper {
+        @include flex-layout(space-between, center)
+    }
+}
+
 .header__getting-started-button {
     background: $primary;
     border-radius: $border-radius;
@@ -105,70 +111,44 @@ body {
     border: none;
     padding: 14px 24px;
     font-weight: 400;
-
     white-space: nowrap;
-    transition: background-color 300ms ease-in-out;
 
     &:hover {
         background-color: $secondary;
     }
 }
 
-@media (min-width: $tablet) {
-    .header__getting-started-wrapper {
-        @include flex-layout(space-between, center)
-    }
-}
-
-@media (min-width: $desktop) {
-
-    .header__navigation-menu {
-        order: 0;
-
-    }
-
-    .header__burger-menu {
-        display: none;
-    }
-}
 
 //___________________HEADER END _____________//
-
 //___________________SLIDER START____________//
-
-// .slider_section {
-//     overflow: hidden;
-// }
 
 .slider_section {
     position: relative;
 
-    .search_title_wrapper {
 
+    .search_title_wrapper {
         position: absolute;
         z-index: 1;
         padding-left: 18px;
         top: 20%;
 
-
         .title_heading {
-            font-size: 62px;
+            font-size: 40px;
             letter-spacing: -2px;
-            line-height: 78px;
+            line-height: 50px;
             color: $text-color;
             font-weight: 600;
-            width: 586px;
+            width: 431px;
             padding-bottom: 60px;
-
         }
 
         .search_button {
             @include flex-layout(flex-start, center);
-            padding-left: 30px;
+            padding-left: 20px;
+            transform: scale(95%);
         }
 
         .search_button button {
-
             background: $primary;
             border: none;
             border-top-right-radius: $border-radius;
@@ -179,13 +159,11 @@ body {
             font-size: 15px;
             font-weight: 500;
             cursor: pointer;
-
         }
 
         img {
             z-index: 1;
             padding-right: 16px;
-
         }
 
         input {
@@ -194,26 +172,54 @@ body {
             width: 310px;
             outline: none;
         }
+    }
 
+    @media (min-width: $tablet) {
+        .search_title_wrapper {
+            top: 20%;
+
+            .title_heading {
+                font-size: 62px;
+                letter-spacing: -2px;
+                line-height: 78px;
+                color: $text-color;
+                font-weight: 600;
+                width: 625px;
+                padding-bottom: 60px;
+            }
+
+            .search_button {
+                @include flex-layout(flex-start, center);
+                padding-left: 30px;
+                transform: scale(100%) translate(0);
+            }
+
+        }
     }
 
     .slider_section_box {
-
         @include flex-layout(flex-end, flex-end);
         background: $secondary;
         height: 630px;
         width: 82%;
         margin-left: auto;
 
-
         .slider_contacts {
-            @include flex-layout (center, center);
-            padding: 29px 58px;
+            @include flex-layout (center, flex-start);
+            padding: 25px 35px;
             background: $primary;
-
-
-
+            flex-direction: column;
         }
+
+        @media (min-width: $tablet) {
+            .slider_contacts {
+                @include flex-layout (center, center);
+                padding: 29px 58px;
+                background: $primary;
+                flex-direction: row;
+            }
+        }
+
 
         .slider_contact {
             @include flex-layout(flex-start, center);
@@ -221,21 +227,25 @@ body {
             font-weight: 600;
             list-style: none;
             font-size: 18px;
-            flex: 0 0 50%;
+            line-height: 3em;
 
 
+        }
 
+        @media (min-width: $tablet) {
+            .slider_contact {
+                flex: 0 0 50%;
+                line-height: 0;
+
+            }
         }
 
         img {
             padding-right: 30px;
         }
-
-
-
-
-
     }
+
+
 
     .search__scroll-down {
         @include flex-layout;
@@ -255,7 +265,6 @@ body {
             font-size: 15px;
         }
     }
-
 }
 
 //________________SLIDER END______________//
@@ -263,47 +272,31 @@ body {
 
 .about-section {
     @include flex-layout(flex-start, center);
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 140px;
     padding-left: 18px;
     margin-bottom: 80px;
-
-    @media only screen and (min-width: 360px) and (max-width: 768px) {
-        @include flex-layout;
-        flex-direction: column;
-        padding: 0 18px;
-        margin-bottom: $section-mobile-margin;
-    }
-
-
-
 
 
     .about-text {
         @include flex-layout(flex-start, flex-start);
         flex-direction: column;
 
-        // margin-right: 140px;
-
-
-
         h2 {
             font-size: 40px;
             letter-spacing: -1px;
             line-height: 50px;
             font-weight: 600;
-            width: 305px;
-
+            max-width: $tablet;
         }
 
         p {
             padding-top: 70px;
-            width: 581px;
+            width: 381px;
             font-size: 13px;
             letter-spacing: 0px;
             line-height: 30px;
             font-weight: 400;
-
         }
 
         p:nth-of-type(2) {
@@ -313,14 +306,8 @@ body {
     }
 
     .milestones {
-        @include flex-layout(flex-end);
+        @include flex-layout;
         flex-wrap: wrap;
-
-        @media only screen and (min-width: $mobile) and (max-width: $tablet) {
-            @include flex-layout;
-            width: 380px;
-        }
-
 
     }
 
@@ -328,14 +315,9 @@ body {
         @include flex-layout;
         flex-direction: column;
         margin: 20px 20px;
-        height: 200px;
-        width: 200px;
+        height: 180px;
+        width: 180px;
         background: $background;
-
-        @media only screen and (min-width: 360px) and (max-width: 768px) {
-            height: 150px;
-            width: 150px;
-        }
 
 
         div {
@@ -345,6 +327,7 @@ body {
             color: $primary;
             font-weight: 600;
 
+
         }
 
         span {
@@ -352,6 +335,73 @@ body {
             letter-spacing: 0px;
             line-height: 50px;
             font-weight: 600;
+
+        }
+    }
+}
+
+@media (min-width: $tablet) {
+    .about-section {
+        @include flex-layout(flex-start, center);
+        flex-direction: row;
+        margin-top: 140px;
+        padding-left: 18px;
+        margin-bottom: 80px;
+
+        .about-text {
+            @include flex-layout(flex-start, flex-start);
+            flex-direction: column;
+
+            h2 {
+                font-size: 40px;
+                letter-spacing: -1px;
+                line-height: 50px;
+                font-weight: 600;
+                width: 305px;
+            }
+
+            p {
+                padding-top: 70px;
+                width: 581px;
+                font-size: 13px;
+                letter-spacing: 0px;
+                line-height: 30px;
+                font-weight: 400;
+            }
+
+            p:nth-of-type(2) {
+                padding-top: 50px;
+            }
+        }
+
+        .milestones {
+            @include flex-layout(flex-end);
+            flex-wrap: wrap;
+        }
+
+        .milestone {
+            @include flex-layout;
+            flex-direction: column;
+            margin: 20px 20px;
+            height: 200px;
+            width: 200px;
+            background: $background;
+
+            div {
+                font-size: 40px;
+                letter-spacing: -1px;
+                line-height: 50px;
+                color: $primary;
+                font-weight: 600;
+
+            }
+
+            span {
+                font-size: 14px;
+                letter-spacing: 0px;
+                line-height: 50px;
+                font-weight: 600;
+            }
         }
     }
 }
@@ -361,13 +411,11 @@ body {
 
 .appartments-section {
     background: $background;
-
 }
 
 .appartments {
     @include flex-layout(space-between, flex-start);
     flex-direction: column;
-
 
     h2 {
         width: 50%;
@@ -377,7 +425,6 @@ body {
         padding-left: 18px;
         margin-top: 66px;
     }
-
 }
 
 .appartments_wrapper {
@@ -397,7 +444,6 @@ body {
             height: 358px;
         }
 
-
         .appartment-card-footer {
             @include flex-layout(space-between, center);
             flex-wrap: wrap;
@@ -405,13 +451,10 @@ body {
             padding-right: 18px;
             padding-top: 20px;
 
-
             h3 {
                 font-size: 15px;
                 letter-spacing: 0px;
                 font-weight: 600;
-                // padding-bottom: 30px;
-
             }
 
             small {
@@ -422,7 +465,6 @@ body {
                 color: $primary;
                 font-weight: 600;
             }
-
 
             ul {
                 @include flex-layout;
@@ -437,7 +479,6 @@ body {
                     line-height: 50px;
                     color: $tertiary;
                     font-weight: 400;
-
                 }
             }
         }
@@ -447,8 +488,10 @@ body {
 .appartments_search {
     @include flex-layout (flex-start, center);
     flex-direction: row;
+    flex-wrap: wrap;
 
     margin-left: 30px;
+    margin-bottom: 85px;
 
     .input_wrapper {
         @include flex-layout;
@@ -505,4 +548,191 @@ body {
 }
 
 //________________APPARTMENTS END______________//
-//________________APPARTMENTS END______________//
+//________________HOW START____________________//
+
+.how {
+    margin-top: 55px;
+    padding: 0 18px;
+
+    .how-it-works-block {
+        h2 {
+            font-size: 40px;
+            letter-spacing: -1px;
+            line-height: 50px;
+            font-weight: 600;
+        }
+
+        p {
+            padding-top: 35px;
+            font-size: 13px;
+            letter-spacing: 0px;
+            line-height: 30px;
+            font-weight: 400;
+            width: 365px;
+        }
+    }
+
+    .how-it-works-wrapper {
+        @include flex-layout(space-between, center);
+        margin-top: 70px;
+        margin-bottom: 90px;
+        flex-wrap: wrap;
+
+
+        .how-card {
+            @include flex-layout(flex-start, flex-start);
+            flex-direction: column;
+            position: relative;
+            width: 345px;
+            height: 373px;
+            background: $white;
+            box-shadow: 0px 2px 15px 0px $tertiary;
+
+
+            img {
+                @include flex-layout;
+                margin-left: -26px;
+                margin-top: -25px;
+            }
+
+            .how-card-text {
+                @include flex-layout (flex-start, space-between);
+                flex-wrap: wrap;
+                flex-direction: row;
+                max-width: 235px;
+                margin-left: 43px;
+                margin-top: 25px;
+
+                h3 {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                h3:first-of-type {
+                    padding-right: 15px;
+                }
+            }
+
+            p {
+                width: 212px;
+                font-size: 13px;
+                letter-spacing: 0px;
+                line-height: 30px;
+                font-weight: 400;
+                margin-bottom: 25px;
+                margin-left: 30px;
+                margin-top: 35px;
+            }
+
+            h4 {
+                margin-left: 30px;
+                padding-bottom: 10px;
+                border-bottom: 3px solid $text-color;
+                font-size: 13px;
+                letter-spacing: 0px;
+                font-weight: 600;
+            }
+        }
+
+        .how-card:first-of-type {
+            background: $primary;
+            color: $white;
+
+            h4 {
+                border-bottom: 3px solid $white;
+            }
+        }
+    }
+
+}
+
+.services_block {
+    .services-heading {
+        text-align: center;
+
+        h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 30px;
+            margin-bottom: 70px;
+
+        }
+    }
+
+    @media (min-width:$desktop) {
+
+        .services-heading {
+            text-align: left;
+
+            p {
+                width: 390px;
+            }
+        }
+    }
+
+    .services-wrapper {
+
+        .services-image {
+            @include flex-layout;
+            width: 100%;
+            height: 630px;
+            flex: 1 0 630px;
+            background: #acd1e1;
+            margin-bottom: 50px;
+
+            img {
+
+                // flex: 1 0 100%;
+            }
+        }
+
+        .services-description {
+            @include flex-layout;
+            flex-direction: column;
+
+            h3 {
+                font-size: 25px;
+                letter-spacing: -1px;
+                margin-bottom: 30px;
+                padding-left: 7px;
+            }
+
+            p {
+                font-size: 13px;
+                line-height: 30px;
+                margin-bottom: 60px;
+                text-align: center;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media (min-width:$desktop) {
+        .services-wrapper {
+            @include flex-layout(center, center);
+            flex-direction: row;
+
+            .services-image {
+                @include flex-layout;
+                margin-right: 60px;
+                margin-bottom: 0;
+            }
+
+            .services-description {
+                @include flex-layout(center, flex-start);
+
+                p {
+                    text-align: left;
+                }
+
+            }
+        }
+    }
+}
