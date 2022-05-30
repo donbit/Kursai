@@ -1,8 +1,23 @@
 {
-  "dependencies": {
-    "bootstrap": "^5.1.3"
+  "name": "kursai",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donbit/Kursai.git"
+  },
+  "keywords": [],
+  "author": "eimantasriauba",
+  "license": "ER",
+  "bugs": {
+    "url": "https://github.com/donbit/Kursai/issues"
+  },
+  "homepage": "https://github.com/donbit/Kursai#readme",
+  "description": "",
   "devDependencies": {
-    "prettier": "2.6.2"
+    "dead-server": "^1.0.6"
   }
 }
