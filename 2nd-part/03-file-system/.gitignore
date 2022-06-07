@@ -2,3 +2,4 @@
 /.vscode
 # macbook'ui
 .DS_Store 
+/data/**/*.json

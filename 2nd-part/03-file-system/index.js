@@ -1,10 +1,18 @@
 import { file } from './lib/file.js';
-console.log(file);
+import { skaitomKarves } from './lib/karviuTurgus.js';
+
+
+
 
 const user = {
-    name: 'Petras',
-    age: 99,
+    name: 'tomas',
+    age: 88,
     isLoggedIn: false,
 }
 
-file.create('./data/users', 'info.txt', user);
+const createNew = file.create('./users2', 'tomas.json', user);
+
+
+// const petroKarves = await skaitomKarves('users', 'petras.json');
+// const marytesKarves = await skaitomKarves('users', 'maryte.json');
+// const jonoKarves = await skaitomKarves('users', 'jonas.json');
