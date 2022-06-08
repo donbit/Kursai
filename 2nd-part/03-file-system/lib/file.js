@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import {fileURLToPath } from 'url';
+import { fileURLToPath } from 'url';
 
 
 const file = {};
@@ -10,7 +10,7 @@ file.fullPath = (dir, fileName) => {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
 
-    return path.join(__dirname, '../data',dir, fileName);
+    return path.join(__dirname, '../data', dir, fileName);
 }
 
 /**
@@ -21,18 +21,20 @@ file.fullPath = (dir, fileName) => {
  * @returns {boolean|string} Sekmes atveju - `true`; klaidos atveju - `false`
  */
 
-file.create = async (dir, fileName, content ) => {
+file.create = async (dir, fileName, content) => {
+    let fileDescriptor = null;
     try {
         const filePath = file.fullPath(dir, fileName);
-        const fileDescriptor = await fs.open(filePath, 'wx');
-
+        fileDescriptor = await fs.open(filePath, 'wx');
         await fs.writeFile(fileDescriptor, JSON.stringify(content));
-
         return true;
 
     } catch (error) {
         return false;
-
+    } finally {
+        if (fileDescriptor) {
+            fileDescriptor.close();
+        }
     }
 
 }
@@ -53,11 +55,33 @@ file.read = async (dir, fileName) => {
     }
 }
 
-file.update = () => {
-    console.log('update file');
+file.update = async (dir, fileName, content) => {
+
+    let fileDescriptor = null;
+    try {
+        const filePath = file.fullPath(dir, fileName);
+        fileDescriptor = await fs.open(filePath, 'r+');
+        await fileDescriptor.truncate();
+        await fs.writeFile(fileDescriptor, JSON.stringify(content));
+        return true;
+    } catch (error) {
+        return false;
+    } finally {
+        if (fileDescriptor) {
+            await fileDescriptor.close();
+        }
+    }
+
 }
-file.delete = () => {
-    console.log('delete file');
+
+file.delete = async (dir, fileName) => {
+    try {
+        const filePath = file.fullPath(dir, fileName);
+        await fs.unlink(filePath);
+        return true;
+    } catch (error) {
+        return false;
+    }
 }
 
 
